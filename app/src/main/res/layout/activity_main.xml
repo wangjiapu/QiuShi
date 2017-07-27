@@ -20,34 +20,21 @@
             android:id="@+id/rv"
             android:layout_marginTop="?attr/actionBarSize"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="#fcfafc">
         </android.support.v7.widget.RecyclerView>
-       <!-- <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/tv"
-                android:layout_marginTop="?attr/actionBarSize"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#fcfafc">
-            </TextView>
-
-        </ScrollView>-->
-
 
     </android.support.design.widget.CoordinatorLayout>
 
 
     <android.support.design.widget.NavigationView
+        android:id="@+id/ngv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:layout_marginTop="100dp"
-        android:layout_marginRight="100dp"
+        android:layout_marginRight="200dp"
         android:layout_marginBottom="100dp"
-        app:headerLayout="@layout/left_menu"
         android:background="@drawable/left_menu_bg"
         app:menu="@menu/left_men" />
 

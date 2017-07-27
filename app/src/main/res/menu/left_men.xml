@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:id="@+id/qqq"
-    android:title="122"/>
-    <item android:id="@+id/qqw"
-        android:title="122"/>
-    <item android:id="@+id/qqe"
-        android:title="122"/>
-    <item android:id="@+id/qqr"
-        android:title="122"/>
+    <item
+        android:id="@+id/ooo"
+        android:title="热门"
+        android:icon="@drawable/hot_menu"/>
+    <item
+        android:id="@+id/qqq"
+        android:title="热图"
+        android:icon="@drawable/hot_menu"/>
+    <item
+        android:id="@+id/qqw"
+        android:title="24小时"
+        android:icon="@drawable/hot_menu"/>
+    <item
+        android:id="@+id/qqe"
+        android:title="文字"
+        android:icon="@drawable/hot_menu"/>
+    <item
+        android:id="@+id/qqr"
+        android:title="糗图"
+        android:icon="@drawable/hot_menu"/>
 
-    <item android:id="@+id/qqt"
-        android:title="122"/>
+    <item
+        android:id="@+id/qqt"
+        android:title="投稿"
+        android:icon="@drawable/hot_menu"/>
 
 </menu>

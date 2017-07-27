@@ -63,15 +63,13 @@ public class StringConverterFactory extends Converter.Factory {
 
                     Document qiushitag=Jsoup.parse(element.toString());
                     //作者
-                    Log.e("1111","2222222222222222");
+
                     Elements author=qiushitag.select("div.author").select(".clearfix");
-                   /* String url=author.select("img").get(1).attr("src");
-                    Log.e("1111","2222222222222222");
-                    Log.e("img:",url);*/
+                    String url=author.select("img").attr("src");
+
                     String name=author.select("h2").text();
-                    Log.e("name",name);
+
                     String age=author.select("div.articleGender").text();
-                    Log.e("age",age);
                     //内容
                     Elements content=qiushitag.select("div.content");
                     Document con2=Jsoup.parse(content.toString());
@@ -83,16 +81,12 @@ public class StringConverterFactory extends Converter.Factory {
                     String stats_vote=Jsoup.parse(stats.toString())
                             .select("span.stats-vote").select("i.number").text();
 
-                    Log.e("stats-vote:",stats_vote);
                     //状态---评论数
                     Elements qiushi_comments=qiushitag.select("a.qiushi_comments");
                     String com=Jsoup.parse(qiushi_comments.toString())
                             .select("i.number").text();
-                    Log.e("com:",com);
 
-                  /*  list.add(new JokeContent(wocao,new JokeContent.person(url,name,"n")
-                            ,stats_vote+"好笑",com+"评论"));*/
-                    list.add(new JokeContent(wocao,"1111",name,age,stats_vote+"好笑",com+"评论"));
+                    list.add(new JokeContent(wocao,"http:"+url,name,age,stats_vote+"好笑",com+"评论"));
                 }
 
 

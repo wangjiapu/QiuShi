@@ -2,16 +2,19 @@ package com.example.com.qiushi.Adapeter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.com.qiushi.R
 import com.example.com.qiushi.been.JokeContent
+import com.example.com.qiushi.utils.GlideUtils
 import kotlinx.android.synthetic.main.jokelist_item.view.*
 import kotlinx.android.synthetic.main.jokelist_item2.view.*
 
 /**
  * Created by 蒲家旺 on 2017/7/26.
+ *
  */
 internal class JokeListAdatpter(var context: Context,var list:List<JokeContent>)
     :RecyclerView.Adapter<JokeListAdatpter.ViewHolder>() {
@@ -30,7 +33,7 @@ internal class JokeListAdatpter(var context: Context,var list:List<JokeContent>)
             else -> {
                 if (holder != null) {
                     holder.jokecontent.text=list[position].title
-                    //holder.img.setImageBitmap()
+                    GlideUtils.loadUrlImage(context,list[position].imge,holder.img)
                     holder.name.text=list[position].name
                     holder.sex.text=list[position].sex
                     holder.com.text=list[position].com

@@ -20,6 +20,7 @@ class JokePresenter constructor(jokeView:IJokeView){
      *   将view和model进行绑定
      */
     fun fetch(){
+        mJokeView.showDialog()
         excuteTask()
     }
 
@@ -40,6 +41,7 @@ class JokePresenter constructor(jokeView:IJokeView){
             }
 
             override fun onCompleted() {
+                mJokeView.dismissDialog()
             }
         })
     }
